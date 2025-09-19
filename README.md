@@ -22,10 +22,16 @@ with **ICP (point-to-plane)**, applies the inverse transform to the source, and 
 > Use a fresh Conda environment so GDAL CLI and Python bindings (if used) won’t conflict.
 
 ```bash
-# 1) Create & activate env (Linux/macOS/WSL)
-conda create -n demalign -c conda-forge -y python=3.10 gdal numpy
-conda activate demalign
+# If you installed ASP in a conda env named "asp":
+conda activate asp
 
+pip install demalign
+
+# verify
+demalign --help
+```
+
+```
 # 2) Install the package (from source for now)
 # pip install demalign        # (once on PyPI)
 pip install -e .              # if you're in the repo folder
@@ -53,16 +59,16 @@ pip install -e .              # if you're in the repo folder
   gdalinfo --version
   ```
 
-### Alternative install options
+### Alternative installs
 
-**A) From GitHub (specific tag):**
+**A) From GitHub (specific release):**
 ```bash
 pip install "git+https://github.com/aramfathian/demalign.git@v0.1.0"
 ```
 
 **B) From source (editable dev install):**
 ```bash
-# inside the repo folder
+# inside the repo
 pip install -e .[dev]
 ```
 
