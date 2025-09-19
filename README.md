@@ -34,14 +34,16 @@ pip install -e .              # if you're in the repo folder
 ### External dependencies (required)
 
 - **NASA Ames Stereo Pipeline (ASP)** ≥ 3.3 (provides `pc_align`, `point2dem`)  
-  Download: https://github.com/NeoGeographyToolkit/StereoPipeline/releases  
+  Download & install: https://github.com/NeoGeographyToolkit/StereoPipeline
+
   Then set on every shell:
   ```bash
   export ASP_HOME="$HOME/StereoPipeline"
   export PATH="$ASP_HOME/bin:$PATH"
   export LD_LIBRARY_PATH="$ASP_HOME/lib:${LD_LIBRARY_PATH:-}"
   export CSM_PLUGIN_PATH="$ASP_HOME/lib/csmplugins"
-  # sanity checks
+
+  # verify
   pc_align --help | head -n 3
   point2dem --help | head -n 3
   ```
@@ -107,11 +109,11 @@ demalign   --source /path/to/source_dem.tif   --reference /path/to/reference_dem
 
 ## How to cite
 ```
-Fathian, A., Shugar, D. (2025). demalign (v0.1.0) [Software]. Zenodo. https://doi.org/xxxxxxxxx
+Fathian, A., Shugar, D. (2025). demalign (v0.2.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.17157750
 ```
 
 ## License
 MIT (see `LICENSE`).
 
 ## Acknowledgements
-Built around the **NASA Ames Stereo Pipeline** tools (`pc_align`, `point2dem`) and a production-tested shell workflow adapted to a reusable Python CLI.
+Built around the **NASA Ames Stereo Pipeline** tools (`pc_align`, `point2dem`) and a production-tested shell workflow adapted to a reusable Python CLI. See: https://stereopipeline.readthedocs.io/en/latest/index.html
