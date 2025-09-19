@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "demalign"
+version: "0.1.0"
+date-released: "2025-09-19"
+abstract: >
+  demalign aligns a source DEM to a stable reference DEM using NASA Ames Stereo Pipeline tools.
+  It estimates translation with Nuth & Kääb, optionally refines with ICP, applies the inverse transform
+  to the source, and re-grids to a DEM via point2dem. Outputs are suitable for DEM of Difference workflows.
+authors:
+  - family-names: Fathian
+    given-names: Aram
+    affiliation: Department of Earth, Energy, and Environment; Water, Sediment, Hazards, and Earth-surface Dynamics (waterSHED) Lab; University of Calgary
+  - family-names: Shugar
+    given-names: Dan
+    affiliation: Department of Earth, Energy, and Environment; Water, Sediment, Hazards, and Earth-surface Dynamics (waterSHED) Lab; University of Calgary
+license: MIT
+repository-code: "https://github.com/aramfathian/demalign"
+keywords:
+  - DEM
+  - coregistration
+  - ASP
+  - pc_align
+  - point2dem
+  - DoD
+preferred-citation:
+  type: software
+  title: "demalign"
+  version: "0.1.0"
+  authors:
+    - family-names: Fathian
+      given-names: Aram
+    - family-names: Shugar
+      given-names: Dan
+  year: 2025
+  url: "https://github.com/aramfathian/demalign"
+  doi: "10.5281/zenodo.xxxxxxx"
